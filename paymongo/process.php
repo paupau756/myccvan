@@ -33,7 +33,7 @@ try {
         'body' => '{"data":{"attributes":{"amount":'.$amount.',"redirect":{"success":"https://tntscheduling.cloud/paymongo/success.php","failed":"https://tntscheduling.cloud/paymongo/failed.php"},"type":"gcash","currency":"PHP"}}}',
         'headers' => [
             'accept' => 'application/json',
-            'authorization' => 'Basic c2tfdGVzdF90aHF2dHpoUll4VXFKcWZld0N2S05pcGk6',
+            'authorization' => 'use your authorization',
             'content-type' => 'application/json',
         ],
     ]);
