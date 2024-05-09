@@ -1,0 +1,643 @@
+body{
+	font-family: Times New Roman;
+	}
+
+/*header.php*/
+.navbar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it's on top of other content */
+    background-color: #f8f9fa; /* Light gray */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow */
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+    color: #000; /* Black */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #007bff; /* Blue */
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+    background-color: #fff; /* White */
+}
+
+.dropdown-item {
+    color: #000; /* Black */
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa; /* Light gray */
+}
+
+
+
+
+/*welcome.php*/
+.welcomecontainer{
+    background-image: url('images/van6.jpg');
+    background-size: center;
+    background-position: center;
+}
+
+#welcome {
+    padding-top: 10%;
+    padding-bottom: 10%;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Welcome Title */
+#welcome h1 {
+    font-size: 5rem;
+    font-family: Trattatello, fantasy;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+    animation: fadeIn 1s ease-in;
+    margin-right: 10%;
+    margin-left: 10%;
+    text-align: center;
+}
+
+/* Welcome Description */
+#welcome p {
+    font-size: 4rem;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    animation: fadeIn 1s ease-in;
+    text-align: center;
+}
+
+
+/*populartour.php*/
+#popular-tours-header {
+    text-align: center;
+}
+
+#popular-tours-header h2,
+#popular-tours-header p {
+    margin: 0; /* Remove default margin */
+}
+
+#popular-tours {
+    padding: 10px;
+    overflow-x: hidden;
+    margin-bottom: -5%;
+}
+
+.popular-tours-container {
+    padding: 20px;
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    scroll-behavior: smooth; /* Add smooth scrolling */
+    cursor: grab; /* Change cursor when dragging */
+    scrollbar-width: none; /* Hide the scrollbar for Firefox */
+    -ms-overflow-style: none; /* Hide the scrollbar for IE/Edge */
+}
+
+.popular-tours-container::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar for WebKit based browsers */
+}
+
+.tour-item {
+    position: relative; /* Position relative for absolute positioning */
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for transform and box-shadow */
+    flex: 0 0 auto; /* Ensures fixed-width */
+    width: 400px; /* Adjust width for full-width images */
+    height: 250px; /* Fixed height for each item */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow */
+}
+
+.tour-item img {
+    width: 100%; /* Ensures image fills container */
+    height: 100%; /* Ensures image fills container */
+    object-fit: cover; /* Ensure aspect ratio is maintained */
+    display: block;
+}
+
+.tour-item p {
+    position: absolute; /* Position absolute for centering */
+    top: 50%; /* Move to the vertical center */
+    left: 50%; /* Move to the horizontal center */
+    transform: translate(-50%, -50%); /* Center the text */
+    text-align: center;
+    margin: 0; /* Remove default margin */
+    padding: 0 10px; /* Add padding to ensure readability */
+    background-color: rgba(0, 0, 0, 0); /* Semi-transparent background */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 40px;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); /* Add text shadow */
+    transition: background-color 0.3s ease; /* Add transition for background color */
+    opacity: 1; /* Initially hidden */ 
+}
+
+/* Add hover effect */
+.tour-item:hover {
+    transform: translateY(-5px); /* Move the card slightly up on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.9); /* Add a stronger shadow on hover */
+}
+
+.tour-item:hover p {
+    opacity: 1; /* Show text on hover */
+}
+
+
+
+/* Our Services Section */
+#our-services {
+    background-color: #f9f9f9;
+    text-align: center;
+    padding: 40px 0;
+}
+
+#our-services h2 {
+    color: #333;
+}
+
+#our-services p {
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.service-items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    background-color: #fff;
+    padding: 20px;
+    margin: 0 20px 20px;
+    flex: 0 0 calc(33.333% - 40px); /* Adjust the width of the service items */
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-item h4 {
+    margin: 0;
+    font-size: 20px;
+    color: #333;
+}
+
+/* Hover effect on service items */
+.service-item:hover {
+    transform: scale(1.05);
+}
+
+/* Gallery Section */
+#gallery {
+    padding: 40px 0;
+    text-align: center;
+}
+
+#gallery h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.gallery-item {
+    width: 100%;
+    height: 300px; /* Set a fixed height for gallery items */
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Hover effect on gallery items */
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+
+/*customerfeedback.php*/
+.feedback-container {
+    display: flex;
+    overflow-x: hidden; /* Hide the horizontal scrollbar */
+    overflow-y: hidden; /* Hide the vertical scrollbar */
+    white-space: nowrap;
+    padding: 30px;
+    margin: 0;
+    cursor: grab; /* Set cursor to grab hand */
+    cursor: -webkit-grab; /* For older versions of Webkit browsers */
+    cursor: -moz-grab; /* For older versions of Mozilla browsers */
+    user-select: none; /* Prevent text selection while dragging */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+.feedback-container::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar for Chrome, Safari, and Opera */
+}
+
+.feedback-item {
+    width: 300px;
+    margin-right: 20px; /* Adjust the spacing between feedback items */
+    border: 1px solid #ccc; /* Optional: Add border for feedback items */
+    padding: 10px; /* Optional: Add padding for feedback items */
+    text-align: center; /* Align text to center */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow */
+    border-radius: 20px;
+    margin-bottom: 20px; /* Add margin below each feedback item */
+}
+
+.satisfaction {
+    color: yellow; /* Set color of stars to yellow */
+    padding: 5px 0; /* Adjust padding for stars */
+}
+
+/* Add shadow to stars */
+.stars {
+    font-size: 40px; /* Adjust the font size for smaller screens */
+    text-shadow: 0 0 5px rgba(200, 0, 0, .4);
+}
+
+
+.feedbackh1 {
+    text-align: center;
+    font-size: 24px; /* Adjust font size for smaller screens */
+    margin-bottom: 20px; /* Add margin below the heading */
+}
+
+
+
+
+/* About Us Section */
+#about-us {
+    padding: 40px 20px; /* Increase padding for better spacing */
+}
+
+#about-us h3 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px; /* Adjust margin for better spacing */
+}
+
+#company-details {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px; /* Adjust padding for better spacing */
+    border-radius: 10px;
+    background-color: #fff; /* Add background color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add box shadow */
+}
+
+#company-details p {
+    margin-bottom: 20px; /* Adjust margin for better spacing */
+    line-height: 1.6; /* Increase line height for better readability */
+    text-align: center; /* Justify text alignment */
+}
+
+/* Mission and Vision Divs */
+.mission-vision {
+    display: flex;
+    justify-content: center; /* Center align items */
+    margin-top: 40px; /* Adjust margin for better spacing */
+}
+
+.mission,
+.vision {
+    flex: 1;
+    text-align: center;
+    padding: 30px; /* Adjust padding for better spacing */
+    border-radius: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5); /* Add box shadow */
+}
+
+.mission {
+    margin-right: 20px; /* Add a gap of 20px */
+}
+
+.vision {
+    margin-left: 20px; /* Add a gap of 20px */
+}
+
+.mission h4,
+.vision h4 {
+    margin-bottom: 15px; /* Adjust margin for better spacing */
+    text-transform: uppercase; /* Apply text transformation */
+}
+
+.mission p,
+.vision p {
+    margin-bottom: 0;
+}
+
+/* Font Awesome Icons */
+.mission i,
+.vision i {
+    margin-right: 5px;
+    font-size: 1.2rem;
+    color: #007bff; /* Blue color */
+}
+
+
+
+
+/* Contact Form Section */
+#contact-us {
+    padding: 20px 20px; /* Increase padding for better spacing */
+}
+
+#contact-us h3 {
+    text-align: center;
+    font-size: 2.5rem; /* Increase font size for better emphasis */
+    margin-bottom: 10px; /* Adjust margin for better spacing */
+}
+
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact-form form {
+    display: grid;
+    gap: 20px; /* Increase gap for better readability */
+}
+
+#contact-form label {
+    font-weight: bold;
+    margin-bottom: -1%;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+    width: 100%;
+    padding: 12px; /* Increase padding for better input area */
+    border: 1px solid #ccc;
+    border-radius: 8px; /* Increase border radius for smoother edges */
+    font-size: 1rem; /* Adjust font size for better consistency */
+}
+
+#contact-form textarea {
+    resize: vertical;
+}
+
+#contact-form button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1rem; /* Adjust font size for better consistency */
+}
+
+#contact-form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Contact Details Section */
+#contact-details {
+    max-width: 600px;
+    margin: 20px auto 0;
+}
+
+#contact-details p {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px; /* Adjust margin for better spacing */
+}
+
+#contact-details ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+#contact-details ul li {
+    margin-top: 10px;
+}
+
+#contact-details ul li a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+#contact-details ul li a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Define keyframes for transform animation */
+@keyframes slideIn {
+    from {
+        transform: scale(0.8); /* Start scale */
+    }
+    to {
+        transform: scale(1); /* End scale */
+    }
+}
+
+
+
+
+
+
+/*verifyemail.php*/
+/* Styles for the body */
+.verification-body {
+    /*font-family: Arial, sans-serif;*/
+    /*background-color: #f2f2f2;*/
+    text-align: center;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15%;
+    max-width: 600px; /* Limiting the width */
+    justify-content: center;
+}
+.verify-email1{
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Adding shadow */
+}
+
+/* Styles for the heading */
+.verification-heading {
+    color: #333;
+}
+
+/* Styles for the verification message */
+.verification-message {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+/* Styles for the verification link */
+.verification-link {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the verification link */
+.verification-link:hover {
+    background-color: #0056b3;
+}
+
+
+/*forgotpassword.php*/
+/* Styles for the two-column layout container */
+.two-column-layout2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust as needed */
+}
+
+/* Styles for the form container */
+.form-container2 {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Adding shadow */
+}
+
+/* Styles for the form heading */
+.form-container2 h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Styles for the form input fields and labels */
+.form-container2 input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Styles for the form submit button */
+.form-container2 input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the form submit button */
+.form-container2 input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Styles for the form link */
+.form-container2 a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+/* Styles for the form link hover effect */
+.form-container2 a:hover {
+    text-decoration: underline;
+}
+
+
+/*success.php*/
+/* Styles for the success container */
+.success-container {
+    max-width: 600px; /* Adjust max-width as needed */
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 15%;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Styles for the sticker image */
+.sticker {
+    max-width: 350px; /* Adjust max-width as needed */
+    margin-bottom: 20px;
+}
+
+/* Styles for the heading */
+.success-container h2 {
+    color: #333;
+}
+
+/* Styles for the paragraph */
+.success-container p {
+    margin-bottom: 20px;
+}
+
+/* Styles for the buttons container */
+.buttons-container {
+    display: flex;
+    justify-content: center;
+}
+
+/* Styles for the buttons */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 10px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the buttons */
+.button:hover {
+    background-color: #0056b3;
+    color: white;
+    text-decoration: none; 
+}
+

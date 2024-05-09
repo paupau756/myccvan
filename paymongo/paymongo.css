@@ -1,0 +1,94 @@
+/* paymongo.css */
+
+/* Reset default browser styles */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+/* Body styles */
+body {
+    line-height: 1;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Container styles */
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Box styles */
+.success-box, .failure-box {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Heading styles */
+.success-heading, .failure-heading {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Message styles */
+.success-message, .failure-message {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Button styles */
+.button-container {
+    text-align: center;
+}
+
+.try-again-button, .contact-support-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.try-again-button {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.contact-support-button {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+/* Button hover styles */
+.try-again-button:hover, .contact-support-button:hover {
+    opacity: 0.8;
+}

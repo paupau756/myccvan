@@ -1,0 +1,1144 @@
+/* General styles */
+body {
+    font-family: times new roman;
+    margin: 0;
+    padding: 0;
+}
+
+/*header.php*/
+.navbar {
+    position: sticky;
+    margin-bottom: 3%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it's on top of other content */
+    background-color: #f8f9fa; /* Light gray */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow */
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+    color: #000; /* Black */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #007bff; /* Blue */
+}
+
+.navbar-toggler-icon {
+    background-color: none; /* Black */
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+    background-color: #fff; /* White */
+}
+
+.dropdown-item {
+    color: #000; /* Black */
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa; /* Light gray */
+}
+
+
+
+
+/*tours.php*/
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#search-tours {
+    text-align: center;
+    margin-top: 1%;
+}
+
+#search-tours h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+#search-tours p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+#search-tours form {
+    margin-bottom: 20px;
+}
+
+#search-tours input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#search-tours button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/*display tour*/
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tour-carousel-container {
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin: 20px;
+    text-align: left;
+    overflow: hidden; /* Clear the float */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add box shadow */
+    transition: box-shadow 0.3s ease; /* Add transition for box shadow */
+    animation: slideIn 0.5s ease-out; /* Apply slide-in animation */
+}
+
+.tour-carousel-container:hover {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7); /* Adjust box shadow on hover */
+}
+
+.tour-carousel-container h3 {
+    margin-bottom: 10px;
+    transition: color 0.3s ease; /* Add transition for text color */
+}
+
+
+.tour-carousel-container:hover h3 {
+    color: #3498db; /* Change text color on hover */
+}
+
+.tour-carousel-container p {
+    margin-bottom: 20px;
+    transition: color 0.3s ease; /* Add transition for text color */
+}
+
+.tour-carousel-container:hover p {
+    color: #555; /* Change text color on hover */
+}
+
+.tour-images-carousel {
+    float: left;
+    width: 40%;
+    margin-right: 5%; /* Adjust the margin for spacing */
+    transition: transform 0.3s ease; /* Add transition for transform */
+}
+
+.tour-carousel-container:hover .tour-images-carousel {
+    transform: scale(1.05); /* Increase size on hover */
+}
+
+.tour-images-carousel img {
+    width: 80%;
+    height: 200px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); /* Add box shadow */
+    transition: box-shadow 0.3s ease; /* Add transition for box shadow */
+}
+
+.tour-images-carousel img:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4); /* Adjust box shadow on hover */
+}
+
+.tour-details {
+    float: left;
+    width: 100%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add box shadow */
+    padding: 20px; /* Add padding for spacing */
+    margin-top: 10px; /* Adjust margin-top for spacing */
+    transition: box-shadow 0.3s ease, padding 0.3s ease; /* Add transition for box shadow and padding */
+}
+
+.tour-details:hover {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3); /* Adjust box shadow on hover */
+    padding: 25px; /* Adjust padding on hover */
+}
+
+.tour-details h3,
+.tour-details p {
+    text-align: right; /* Align tour name and tour activities to the right */
+    transition: color 0.3s ease; /* Add transition for text color */
+}
+
+.tour-details:hover h3,
+.tour-details:hover p {
+    color: #3498db; /* Change text color on hover */
+
+}
+
+
+
+
+/*back to top*/
+#back-to-top-btn {
+    display: none; /* Hide the button by default */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 99;
+    font-size: 20px;
+    line-height: 40px; /* Center the arrow vertically */
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+#back-to-top-btn:hover {
+    background-color: #0056b3;
+}
+.details-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; /* Set the background color */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.details-button:hover {
+    background-color: #0056b3; /* Change background color on hover */
+    color: white;
+    text-decoration: none; 
+}
+
+
+
+/*viewdetails.php*/
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tour-details-container {
+    margin: 20px;
+    background-color: #f2f2f2;
+    padding: 50px;
+    padding-bottom: 50px;
+    text-align: left;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9);
+    animation: slideIn 0.5s ease-out; /* Apply slide-in animation */
+}
+
+.tour-details-container h3 {
+    margin-top: 10px;
+}
+
+.tour-details-container p {
+    margin-bottom: 10px;
+}
+
+
+.tour-details-container .tour-images-carousel {
+    max-width: 100%; /* Ensure the carousel doesn't overflow */
+}
+
+.tour-details-container .tour-images-carousel img {
+    width: 100%; /* Make images fill the available width */
+    height: 310px; /* Maintain aspect ratio */
+}
+
+
+.tour-details-container .book-now-button {
+    display: inline-block;
+    background-color: #0056b3;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tour-details-container .book-now-button:hover {
+    background-color: #2980b9;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow: auto;
+}
+
+/* Modal content */
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 80%;
+    position: relative;
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Modal images carousel */
+.modal-images-carousel {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.modal-images-carousel img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+/*bookingcart.php*/
+.booking-cart {
+    /*margin-top: 20px;*/
+    margin-bottom: 20px;
+}
+
+.booking-cart h1 {
+    /*font-size: 50px;*/
+    text-align: center;
+}
+
+/* Styles for the booking table */
+.booking-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.booking-table th, .booking-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.booking-table th {
+    background-color: #f2f2f2;
+    text-align: left;
+    font-weight: bold;
+}
+
+/* Button styles */
+.booking-table .view-booking-link,
+.booking-table .leave-feedback-button {
+    text-decoration: none;
+    color: white;
+    background-color: #007bff; /* Light gray background */
+    border: 1px solid #007bff; /* Border color same as text color */
+    padding: 5px 10px; /* Adjust padding as needed */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.booking-table .view-booking-link:hover,
+.booking-table .leave-feedback-button:hover {
+    background-color: #0056b3; /* Darker background color on hover */
+    color: #fff; /* Text color white on hover */
+}
+
+
+
+
+/*notifications*/
+.notification-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.notification-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.notification-table th,
+.notification-table td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.notification-table th {
+    background-color: #f2f2f2;
+}
+
+.notification-table tbody tr:hover {
+    background-color: #ddd;
+}
+
+.action-link button,
+.action-link a {
+    margin-right: 5px;
+    padding: 5px 10px; /* Add padding for better button appearance */
+    border: none; /* Remove default button border */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.action-link button {
+    background-color: #007bff; /* Set background color for buttons */
+    color: white; /* Set text color for buttons */
+    border-radius: 10px;
+}
+
+.action-link button:hover {
+    background-color: #0056b3; /* Change background color on hover */
+}
+
+.action-link a.remove-link {
+    color: white; /* Set text color for remove link */
+    background-color: red; /* Set background color for remove link */
+    padding: 5px 10px; /* Add padding for better link appearance */
+    border-radius: 10px; /* Add rounded corners */
+    text-decoration: none; /* Remove default underline */
+}
+
+.action-link a.remove-link:hover {
+    background-color: darkred; /* Change background color on hover */
+}
+
+
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/*allinform.php*/
+/*.container2 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}*/
+
+/* Tour Info Container */
+.tour-info-container {
+    flex: 0 1 calc(50% - 20px);
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-top: -3%;
+}
+
+.tour-title {
+    font-size: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #333;
+}
+
+.tour-info {
+    font-size: 16px;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-bottom: 10px;
+    text-align: center; 
+    color: #555;
+}
+
+.tour-note {
+    margin-top: 30px;
+    color: green;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Form Container */
+.form-container {
+    flex: 0 1 calc(50% - 20px);
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-right: 10%;
+    margin-left: 10%;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.form-container label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    color: #333;
+}
+
+.form-container input[type="text"],
+.form-container input[type="date"],
+.form-container input[type="time"],
+.form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    color: #555;
+}
+
+.form-container #pickup-suggestions {
+    margin-top: 5px;
+}
+
+.form-container .date-time-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.form-container .date-time-container div {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.form-container .payment-details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.form-container .payment-details div {
+    flex: 1;
+}
+
+.form-container input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.form-container input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+.form-container input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+
+/*viewbooking.php*/
+.booking-section {
+    text-align: center;
+    margin-top: 2%;
+}
+
+.booking-title {
+    /* Add any additional styling for the title if needed */
+}
+
+/* Container */
+.booking-receipt-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Two columns with a minimum width of 300px */
+    gap: 20px; /* Gap between columns */
+    justify-items: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+}
+
+/* Receipt */
+.booking-receipt {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 80%;
+    max-width: 600px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin-top: 6%;
+}
+
+/* Section Title */
+.section-title {
+    font-size: 1.2em;
+    color: #333333;
+    margin-bottom: 10px;
+     text-align: center;
+}
+
+/* Detail Sections */
+.user-details,
+.driver-details,
+.booking-details,
+.payment-info,
+.payment-form,
+.refund_form {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    width: 100%; /* Set the width to 100% to fill the grid column */
+}
+
+/* Booking Info */
+.booking-info {
+    margin-bottom: 5px;
+}
+
+/* Payment Form */
+.payment-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px; /* Add margin-top for spacing */
+    text-align: center;
+    margin-right: 5%;
+}
+
+.payment-details{
+    text-align: center;
+}
+
+/* Payment Form Title */
+.payment-form h2 {
+    font-size: 1.5em;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+/* Payment Form Instructions */
+.payment-form h3 {
+    font-size: 1.2em;
+    color: black;
+    margin-bottom: 10px;
+}
+
+/* Payment Form Input */
+.payment-form label {
+    font-size: 1em;
+    color: #333333;
+    margin-bottom: 5px;
+}
+
+.payment-form input[type="number"],
+.payment-form input[type="text"],
+.payment-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+/* Payment Form Button */
+.payment-form button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.payment-form button:hover {
+    background-color: #0056b3;
+}
+.error-message {
+    color: red; /* Error message color */
+    font-size: 0.8em; /* Error message font size */
+    margin-top: 5px; /* Add margin-top for spacing */
+    display: block; /* Display error message as block element */
+}
+
+
+
+/* Refund Form */
+.refund_form {
+    display: none;
+    margin-top: 20px; /* Add margin-top for spacing */
+    text-align: center;
+}
+
+/* Refund Form Title */
+.refund_form h3 {
+    font-size: 1.5em;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+/* Refund Form Input Label */
+.refund_form label {
+    font-size: 1em;
+    color: #333333;
+    margin-bottom: 5px;
+}
+
+/* Refund Form Input */
+.refund_form input[type="number"],
+.refund_form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+/* Refund Form Button */
+.refund_form button {
+    background-color: #dc3545;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.refund_form button:hover {
+    background-color: #c82333;
+}
+
+
+/* Button */
+.button-container {
+    display: flex;
+    justify-content: center; /* Horizontally center the button */
+    margin-top: 0px; /* Add margin-top for spacing */
+}
+
+#show_refund_form_button,
+.submit-button1 {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#show_refund_form_button:hover,
+.submit-button1:hover {
+    background-color: #0056b3;
+
+}
+
+.cancel-button {
+    background-color: red;
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding for the button */
+    border: none; /* Remove button border */
+    border-radius: 5px; /* Add some border radius */
+    cursor: pointer; /* Show pointer on hover */
+}
+
+.cancel-button:hover {
+    background-color: darkred; /* Darken the background color on hover */
+}
+
+
+/* Responsive */
+/*@media screen and (max-width: 768px) {
+    .booking-receipt {
+        width: 90%;
+    }
+}*/
+
+
+
+
+/*bookinghistory.php*/
+.booking-history h1 {
+    text-align: center;
+}
+.booking-list {
+    margin-top: 20px;
+}
+
+.booking-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.booking-table th,
+.booking-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.booking-table th {
+    background-color: #f2f2f2;
+}
+
+.booking-table td button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.booking-table td button:hover {
+    background-color: #0056b3;
+}
+
+
+/*leave feedback form*/
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scrolling if needed */
+    background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto; /* Center vertically and horizontally */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Adjust width as needed */
+    max-width: 500px; /* Maximum width */
+    border-radius: 5px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Form styles */
+.modal-title {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form-select,
+.form-textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+.submit-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+
+/*settings.php*/
+.account-section{
+    text-align: center;
+}
+.form-section {
+    margin-bottom: 20px;
+}
+
+/* Form input styling */
+.form-input {
+    width: 60%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+/* Form button styling */
+.form-button {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Form button hover effect */
+.form-button:hover {
+    background-color: #0056b3;
+}
+
+/* Change Password section styling */
+.form-section1 {
+    margin-top: 20px;
+}
+
+/* Show password checkbox styling */
+#show_password {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+/* Modal content styling */
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    border-radius: 5px;
+}
+
+/* Close button styling */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/*form.php*/
+/* Form styles */
+.form-title{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.inquiry-form {
+    width: 60%;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+}
+
+.inquiry-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.inquiry-form .form-input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.inquiry-form .form-select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);    
+}
+
+.inquiry-form .form-textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.inquiry-form .form-checkbox {
+    margin-bottom: -20px;
+}
+
+.inquiry-form .form-submit {
+    margin-top: -5%;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.inquiry-form .form-submit:hover {
+    background-color: #0056b3;
+}
+
+/* Grid styles */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    margin-bottom: 5px;
+}
+
+.grid-item label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.grid-item input[type="date"],
+.grid-item input[type="time"] {
+    width: calc(100% - 10px); /* Adjust width to fit in the grid item */
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+
+/*notification.php view button*/
+.button4 {
+    background-color: green;
+    color: white; /* Set text color to white for better contrast */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Adjust padding as needed */
+    border-radius: 5px; /* Add some border radius for a rounded look */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    /* Add any other styles you want */
+}
+
+/*cancel button in bookingcart.php*/
+.cancel-booking-link {
+    background-color: red;
+    color: white; /* Set text color to white for better visibility */
+    padding: 6px 10px; /* Adjust padding as needed */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    text-decoration: none; /* Remove default underline */
+}
+
+.cancel-booking-link:hover {
+    background-color: darkred; /* Change background color on hover */
+}
+
+
+

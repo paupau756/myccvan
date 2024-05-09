@@ -1,0 +1,1050 @@
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css');
+
+/* Header Styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff; /* Adjust the background color as needed */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5); /* Add a subtle box shadow for depth */
+    z-index: 1000;
+}
+
+/* Logo Styles */
+#logo {
+    position: fixed;
+    top: 10px; /* Adjust as needed */
+    left: 20px; /* Adjust as needed */
+    z-index: 1000; /* Adjust the z-index to ensure it appears above other elements */
+}
+
+#logo img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+/* Navigation Styles with Animation */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333; /* Adjust the text color as needed */
+    font-weight: bold;
+    position: relative;
+    transition: font-size 0.3s ease; /* Add transition for font-size */
+}
+
+nav a:hover {
+    font-size: 1.2em; /* Increase font size on hover */
+}
+
+
+/* Sticky Header Styles */
+.scroll-link {
+    transition: color 0.3s ease-in-out;
+}
+
+header.sticky {
+    background-color: #fff; /* Adjust the background color for sticky header */
+}
+
+header.sticky .scroll-link {
+    color: #555; /* Adjust the text color for sticky header */
+}
+
+/* Dropdown Styles */
+.dropdown {
+    cursor: pointer;
+    position: all;
+}
+
+#dropdownContent {
+    margin-top: 3%; 
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    left: 81%;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.dropdown:hover #dropdownContent {
+    display: all;
+}
+
+/* Icons */
+.dropdown::after {
+    content: '\2630'; /* Unicode character for hamburger icon */
+    font-size: 24px;
+    margin-left: 10px;
+}
+
+
+
+
+/*welcome*/
+#welcome {
+    margin-top: 3%;
+    padding-top: 20%;
+    padding-bottom: 15%;
+    background-image: url('images/van6.jpg');
+    background-size: cover; /* adjust as needed */
+    background-position: center; /* adjust as needed */
+    text-align: center;
+    color: white; /* Text color */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 3); /* Text shadow for better visibility */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#welcome h1 {
+    font-size: 5rem; /* Adjust as needed */
+    font-family: Trattatello, fantasy;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); /* Adjust text shadow */
+    animation: fadeIn 1s ease-in; /* Apply fade-in animation */
+}
+
+#welcome p {
+    font-size: 4rem; /* Adjust as needed */
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Adjust text shadow */
+    animation: fadeIn 1s ease-in; /* Apply fade-in animation */
+}
+
+
+
+/*our services*/
+#our-services {
+    background-color: #f9f9f9; /* Add a background color for the section */
+    text-align: center;
+}
+
+#our-services h3 {
+    color: #333; /* Adjust the text color as needed */
+}
+
+#our-services p {
+    color: #666; /* Adjust the text color as needed */
+    margin-bottom: 40px;
+}
+
+.service-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    background-color: #fff; /* Add a background color for each service item */
+    padding: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 20px;    
+    flex: 0 0 50%; /* Adjust the width of the service items as needed */
+    border-radius: 10px; /* Add rounded corners to service items */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5); /* Add a subtle box shadow for depth */
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-item h4 {
+    margin: 0;
+    font-size: 20px;
+    color: #333; /* Adjust the text color as needed */
+}
+
+/* Hover effect on service items */
+.service-item:hover {
+    transform: scale(1.05); /* Add a slight scale effect on hover */
+}
+
+
+/*popular tours*/
+#popular-tours-header {
+    text-align: center;
+}
+
+#popular-tours-header h2,
+#popular-tours-header p {
+    text-align: center;
+}
+
+#popular-tours {
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+.popular-tours-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth; /* Add smooth scrolling */
+    cursor: grab; /* Change cursor when dragging */
+    scrollbar-width: none; /* Hide the scrollbar for Firefox */
+    -ms-overflow-style: none; /* Hide the scrollbar for IE/Edge */
+}
+
+.popular-tours-container::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar for WebKit based browsers */
+}
+
+.tour-item {
+    position: relative; /* Position relative for absolute positioning */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.8s ease; /* Add transition for transform and box-shadow */
+    flex: 0 0 auto; /* Ensures fixed-width */
+    width: 400px; /* Adjust width for full-width images */
+    height: 300px; /* Fixed height for each item */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow */
+}
+
+.tour-item img {
+    width: 100%; /* Ensures image fills container */
+    height: 100%; /* Ensures image fills container */
+    object-fit: cover; /* Ensure aspect ratio is maintained */
+    display: block;
+}
+
+.tour-item p {
+    position: absolute; /* Position absolute for centering */
+    top: 50%; /* Move to the vertical center */
+    left: 50%; /* Move to the horizontal center */
+    transform: translate(-50%, -50%); /* Center the text */
+    text-align: center;
+    margin: 0; /* Remove default margin */
+    padding: 0 10px; /* Add padding to ensure readability */
+    background-color: rgba(0, 0, 0, 0); /* Semi-transparent background */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 40px;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 2); /* Add text shadow */
+}
+
+
+/* Add hover effect */
+.tour-item:hover {
+    transform: translateY(-5px); /* Move the card slightly up on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.9); /* Add a stronger shadow on hover */
+}
+
+
+/* about us, mission and vision */
+#about-us {
+    padding: 20px;
+}
+
+#about-us h3 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#company-details {
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0,0.5); /* Add box shadow */
+    padding:100px;
+}
+
+#company-details p {
+    margin-bottom: 15px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.mission-vision {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.mission,
+.vision {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add box shadow */
+}
+
+.mission h4,
+.vision h4 {
+    margin-bottom: 10px;
+}
+
+.mission p,
+.vision p {
+    margin-bottom: 0;
+}
+
+/* Font Awesome icons */
+.mission i,
+.vision i {
+    margin-right: 5px;
+    font-size: 1.2rem;
+    color: #007bff; /* Blue color */
+}
+
+
+
+/*contact form*/
+#contact-us {
+    padding: 20px;
+}
+
+#contact-us h3 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact-form form {
+    display: grid;
+    gap: 10px;
+}
+
+#contact-form label {
+    font-weight: bold;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#contact-form textarea {
+    resize: vertical;
+}
+
+#contact-form button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#contact-form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+#contact-details {
+    max-width: 600px;
+    margin: 20px auto 0;
+}
+
+#contact-details p {
+    text-align: center;
+    font-weight: bold;
+}
+
+#contact-details ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+#contact-details ul li {
+    margin-top: 10px;
+}
+
+#contact-details ul li a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+#contact-details ul li a:hover {
+    text-decoration: underline;
+}
+
+
+
+/*Gallery Section*/
+#gallery {
+    padding: 20px;
+    text-align: center;
+}
+
+#gallery h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.gallery-item {
+    width: 100%;
+    height: 400px; /* Set height to 400px */
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%; /* Make the image fill its container */
+    object-fit: cover; /* Ensure the image covers the container without distortion */
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+
+
+/*create account*/
+.two-column-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-image: url('images/van8.jpg'); /* Replace 'your-background-image.jpg' with your image path */
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+
+}
+
+.get-started-section {
+    flex: 1;
+    margin-top: 20%;
+    max-width: 45%;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add box shadow */
+}
+
+.get-started-section h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.get-started-section p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.get-started-section a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #2980b9;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.get-started-section a:hover {
+    background-color: #1c6ea4;
+}
+
+
+
+.account-form-container {
+    flex: 1;
+    margin-top: 2%;
+    max-width: 45%;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add box shadow */
+}
+
+.account-form-container form {
+    margin-top: 40px; /* Adjust as needed */
+}
+
+.account-form-container h2 {
+    color: #000;
+    text-align: center;
+    font-size: 30px;
+}
+
+.account-form-container label {
+    display: block;
+    margin-bottom: 5px;
+    color: white;
+    font-size: 18px;
+}
+
+.account-form-container input[type="text"],
+.account-form-container input[type="email"],
+.account-form-container input[type="password"],
+.account-form-container input[type="button"],
+.account-form-container input[type="submit"] {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.account-form-container input[type="button"],
+.account-form-container input[type="submit"] {
+    background-color: #2980b9;
+    color: #fff;
+    cursor: pointer;
+}
+
+.account-form-container input[type="button"]:hover,
+.account-form-container input[type="submit"]:hover {
+    background-color: #1c6ea4;
+}
+
+.account-form-container a {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
+.account-form-container a:hover {
+    text-decoration: underline;
+}
+
+
+/*success.php*/
+.success-container {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 78vh;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0); /* Box shadow */
+}
+
+.success-container h2 {
+    color: black;
+}
+
+.success-container p {
+    color: black;
+    margin-bottom: 20px;
+}
+
+/* Button Styles */
+.button {
+    display: inline-block;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #3498db; /* Background color for buttons */
+    border-radius: 5px;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.9); /* Box shadow */
+}
+
+.button i {
+    margin-right: 5px;
+}
+
+.button:hover {
+    background-color: #2184c4; /* Hover background color for buttons */
+}
+
+/* PNG Sticker Styles */
+.sticker {
+    height: 400px;
+    width: 500px; /* Adjust width as needed */
+    margin-bottom: 10px; /* Adjust spacing as needed */
+}
+
+
+/*resetpassword*/
+.two-column-layout2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust height as needed */
+    background-image: url('images/van8.jpg'); /* Replace 'your-background-image.jpg' with your image file path */
+    background-size: cover;
+    background-position: center;
+}
+
+
+.password-reset-form {
+    background-color: rgba(255, 255, 255, 0.8); /* Adjust the alpha value (0.8) to make it more transparent */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6); /* Box shadow */
+    text-align: center;
+}
+
+
+.password-reset-form h2 {
+    color: #333333;
+}
+
+.password-reset-form label {
+    color: #333333;
+}
+
+.password-reset-form input[type="submit"] {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.password-reset-form input[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+.password-reset-form a {
+    color: #333333;
+    text-decoration: none;
+}
+
+
+/*payment success*/
+.title {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.message {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.dashboard-btn, .cart-btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.dashboard-btn:hover, .cart-btn:hover {
+    background-color: #0056b3;
+}
+    
+
+/*forgotpassword.php*/
+/* CSS Styles */
+.two-column-layout2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.form-container2 {
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container2 h2 {
+    margin-bottom: 20px;
+}
+
+.form-container2 form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container2 label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-container2 input[type="email"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-container2 input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-container2 input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.form-container2 a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.form-container2 a:hover {
+    text-decoration: underline;
+}
+
+
+/*feedbackk*/
+/* Define keyframes for transform animation */
+@keyframes slideIn {
+    from {
+        transform: scale(0.8); /* Start scale */
+    }
+    to {
+        transform: scale(1); /* End scale */
+    }
+}
+
+/* CSS for the feedback section */
+.feedback-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.feedback-section h1 {
+    margin-bottom: -10px;
+}
+
+.swiper-container {
+    width: 100%;
+    padding: 30px;
+}
+
+.swiper-slide {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    transform: scale(0.8); /* Initial scale to create a 3D effect */
+    transition: transform 0.3s ease;
+    overflow: hidden; /* Hide overflowing content */
+    animation: slideIn 0.5s ease; /* Apply transform animation */
+}
+
+.swiper-slide-active {
+    transform: scale(1.1); /* Scale up the active slide */
+}
+
+.swiper-slide-next .swiper-slide-active,
+.swiper-slide-prev .swiper-slide-active {
+    transform: scale(0.9); /* Scale down the adjacent slides */
+}
+
+.feedback-item {
+    padding: 30px;
+    text-align: center;
+}
+
+.feedback-item p {
+    margin: 5px 0;
+}
+
+.no-feedbacks {
+    margin: 20px;
+}
+
+.comment {
+        max-width: 100%;
+        word-wrap: break-word; /* or word-break: break-all; */
+    }
+
+/* Swiper navigation buttons */
+.swiper-button-prev,
+.swiper-button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-button-prev {
+    left: 10px;
+}
+
+.swiper-button-next {
+    right: 10px;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+/* CSS for star ratings */
+.stars {
+    color: yellow; /* Set star color to yellow */
+    font-size: 50px; /* Adjust star size */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add shadow effect */
+}
+
+
+
+
+
+
+
+
+
+
+/* Responsive Styles for Mobile Devices */
+@media only screen and (max-width: 600px) {
+    header {
+        position: absolute;
+        top: 0;
+        padding: 10px 0; /* Add padding to the header for better readability */
+    }
+    #logo {
+        top: 5px; /* Adjust positioning for smaller screens */
+        left: 10px; /* Adjust positioning for smaller screens */
+    }
+    #logo img {
+        width: 80px; /* Adjust the size of the logo for smaller screens */
+    }
+    nav ul {
+        flex-direction: column; /* Display navigation items as a column */
+        align-items: center; /* Align items to the start of the column */
+        padding: 0; /* Remove padding */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Add vertical margin between navigation items */
+    }
+    #dropdownContent {
+        width: 50%; /* Adjusted width for smaller screens */
+        text-align: center;
+        left: 23%;
+        margin-left: 3%;
+        margin-top: 8%;
+    }
+
+
+    /*welcome*/
+    #welcome {
+        margin-top: 69%;
+        padding-top: 10%; /* Adjust padding top for smaller screens */
+        padding-bottom: 10%; /* Adjust padding bottom for smaller screens */
+    }
+
+    #welcome h1 {
+        font-size: 3rem; /* Adjust heading font size for smaller screens */
+    }
+
+    #welcome p {
+        font-size: 2.5rem; /* Adjust paragraph font size for smaller screens */
+    }
+
+
+    /*service offers section */
+    .service-item {
+        flex-basis: calc(100% - 20px); /* Set service items to take full width on smaller screens */
+        max-width: none; /* Remove max-width on smaller screens */
+    }
+
+
+    /*gallery section*/
+    .gallery-item {
+        height: 200px; /* Adjust height for smaller screens */
+    }
+
+
+    /*mission and vision section*/
+    #company-details {
+        padding: 50px; /* Adjust padding for smaller screens */
+    }
+    
+    .mission-vision {
+        flex-direction: column; /* Change to column layout for smaller screens */
+        align-items: center; /* Center items horizontally for smaller screens */
+    }
+    
+    .mission,
+    .vision {
+        width: 100%; /* Make mission and vision sections full width on smaller screens */
+        margin-top: 20px; /* Adjust margin top for smaller screens */
+    }
+    
+    .mission,
+    .vision {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    /*contact form section*/
+    #contact-form {
+        max-width: 400px; /* Adjust max-width for smaller screens */
+    }
+
+    #contact-form input[type="text"],
+    #contact-form input[type="email"],
+    #contact-form textarea {
+        width: 100%; /* Make input fields full width on smaller screens */
+    }
+
+    #contact-details {
+        max-width: 400px; /* Adjust max-width for smaller screens */
+    }
+
+
+    /*create account section / createaccount.php*/
+    .two-column-layout {
+        flex-direction: column; /* Change to column layout for smaller screens */
+        align-items: center; /* Center items horizontally for smaller screens */
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    .get-started-section {
+        max-width: 100%; /* Make section full width on smaller screens */
+        margin-top: 10%; /* Adjust margin top for smaller screens */
+    }
+    .account-form-container {
+        max-width: 100%; /* Make section full width on smaller screens */
+        margin-top: 5%; /* Adjust margin top for smaller screens */
+    }
+
+    .account-form-container h2 {
+        font-size: 24px; /* Adjust font size for smaller screens */
+    }
+
+    .account-form-container input[type="text"],
+    .account-form-container input[type="email"],
+    .account-form-container input[type="password"],
+    .account-form-container input[type="button"],
+    .account-form-container input[type="submit"] {
+        width: 95%; /* Make input fields full width on smaller screens */
+    }
+
+    .success-container {
+        margin-top: 50%;
+        height: auto; /* Set height to auto for smaller screens */
+    }
+
+    .sticker {
+        max-width: 100%; /* Make sticker image responsive */
+        height: auto; /* Set height to auto for smaller screens */
+    }
+
+    /*forgot password.php*/
+    .two-column-layout2 {
+        padding: 20px;
+    }
+
+    .form-container2 {
+        max-width: 100%;
+    }
+
+    /*feedback*/
+    .feedback-section {
+        padding: 20px;
+        text-align: center;
+        width: 600px;
+    }
+    .feedback-section h1{
+        margin: auto;
+    }
+    .swiper-slide {
+        padding: 10px; /* Adjust padding */
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        width: 40px; /* Adjust button size */
+        height: 20px; /* Adjust button size */
+        font-size: 12px; /* Adjust button font size */
+    }
+    .stars {
+        font-size: 30px; /* Adjust star size for smaller screens */
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 1); /* Adjust shadow effect for smaller screens */
+    }
+}
+
+
+
+
+
+
+
+/* Hide scrollbar for Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent; /* Firefox 64 */
+}
+
+/* Hide scrollbar for IE, Edge and Safari */
+*::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+/* Style for the scrollbar track */
+::-webkit-scrollbar-track {
+    background: transparent; /* Make scrollbar track transparent */
+}
+
+/* Style for the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Style for the scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Darker color on hover */
+}
+
+

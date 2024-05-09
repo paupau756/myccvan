@@ -1,0 +1,661 @@
+body {
+    /*font-family: "Courier New", Courier, monospace;*/
+    font-family: "Times New Roman", Times, serif;
+}
+
+
+/*header.php*/
+header {
+    background-image: linear-gradient(to right, #008DDA, #F27BBD);
+
+}
+
+/* Main navigation styles */
+.main-nav {
+    display: flex;
+    justify-content: space-between; /* Aligns main-nav1 to the left and nav-list to the right */
+    align-items: center; /* Vertically center items */
+    padding: 10px;
+}
+
+/* CSS for main-nav1 */
+.main-nav1 {
+    display: flex;
+    align-items: center;
+}
+
+/* Dashboard button styles */
+.dashboard-btn {
+    font-weight: bold;
+    color: #333; /* Text color */
+    text-decoration: none; /* Remove underline */
+    margin-right: 20px; /* Adjust spacing */
+}
+
+.dashboard-btn:hover {
+    text-decoration: none; /* Underline on hover */
+}
+
+/* Dropdown styles */
+.dropdown {
+    position: relative;
+    margin-right: 20px; /* Adjust spacing */
+}
+
+.dropbtn {
+    background-color: transparent;
+    color: #333;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #f9f9f9;
+}
+
+/* List styles */
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Use flexbox for the list */
+}
+
+/* List item styles */
+.nav-item {
+    margin-left: 10px; /* Add some space between items */
+}
+
+/* Link styles */
+.nav-item a {
+    text-decoration: none;
+    color: #333; /* Link color */
+    padding: 5px; /* Add padding for better clickability */
+}
+
+/* Icon styles */
+.nav-item a i {
+    color: #000; /* Black icon color */
+    transition: transform 0.3s ease; /* Add smooth transition effect */
+}
+
+/* Icon hover styles */
+.nav-item a:hover i {
+    transform: scale(1.2); /* Increase the size of the icon on hover */
+}
+
+/* Notification count styles */
+.notification-count {
+    position: absolute;
+    top: 0;
+    right: -8px; /* Adjust as needed */
+    background-color: red; /* Background color of the count */
+    color: #fff; /* Text color of the count */
+    border-radius: 50%; /* Make it circular */
+    padding: 2px 5px; /* Add some padding */
+    font-size: 12px; /* Adjust font size */
+}
+
+
+
+/*headers or titles*/
+
+
+
+/* Dashboard insights container */
+.insights {
+    display: flex; /* Use flexbox layout */
+    justify-content: space-around; /* Distribute items evenly */
+    flex-wrap: wrap; /* Wrap items to new line if necessary */
+    margin-top: 20px; /* Add some margin from the top */
+}
+
+/* Individual insight item */
+.insight {
+    text-align: center; /* Center align content */
+    padding: 20px; /* Add padding */
+    border-radius: 10px; /* Add border radius for rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add box shadow for depth */
+    background-image: linear-gradient(to right, #008DDA, #F27BBD);
+    width: calc(33.33% - 20px); /* Set width for each item, considering margin */
+    margin-bottom: 20px; /* Add some margin at the bottom */
+}
+
+/* Icon styles */
+.insight i {
+    font-size: 48px; /* Set font size for the icon */
+    margin-bottom: 10px; /* Add some space between icon and text */
+}
+
+/* Heading styles */
+.insight h3 {
+    margin: 0; /* Remove default margin */
+    font-size: 18px; /* Set font size for the heading */
+}
+
+/* Paragraph styles */
+.insight p {
+    margin: 5px 0 0; /* Set margin for the paragraph */
+    font-size: 16px; /* Set font size for the paragraph */
+    color: black; /* Set color for the paragraph */
+}
+
+
+/*upcoming task*/
+/* Styling for the "UPCOMING TASKS" section */
+.upcoming-tasks {
+    margin-top: 20px;
+    margin-bottom: 20px; /* Add some space below */
+    text-align: center;
+
+}
+
+.upcoming-tasks h2 {
+    font-size: 24px; /* Adjust font size */
+    margin: 0; /* Remove default margin */
+    font-weight: bold;
+}
+
+/* Styling for the activity table */
+.activity-table {
+    margin-left: 2%;
+    margin-left: 2%;
+    width: 96%; /* Make table full width */
+    border-collapse: collapse; /* Collapse borders */
+}
+
+.activity-table th,
+.activity-table td {
+    padding: 10px; /* Add padding */
+    border: 1px solid #ddd; /* Add border */
+    text-align: left; /* Align text to left */
+}
+
+.activity-table th {
+    background-color: #008DDA; /* Background color for header */
+}
+
+.activity-table tbody tr:hover {
+    background-color: lightblue; /* Hover background color */
+}
+
+
+/*manage tables*/
+/* Table styles */
+table {
+    margin: 2%;
+    width: 96%; /* Make the table fill its container */
+    border-collapse: collapse; /* Collapse border spacing */
+}
+
+/* Table header styles */
+th {
+    background-color: #008DDA; /* Header background color */
+    padding: 10px; /* Padding for header cells */
+    text-align: center; /* Align text to left */
+    border: 1px solid #ddd; /* Border for header cells */
+}
+
+/* Table cell styles */
+td {
+    padding: 10px; /* Padding for cells */
+    border: 1px solid #ddd; /* Border for cells */
+}
+
+/* Hover effect for rows */
+tr:hover {
+    background-color: lightblue;
+}
+
+/* Button styles */
+a.button {
+    display: inline-block;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Confirm button */
+a.button.confirm {
+    background-color: green;
+}
+
+/* Cancel button */
+a.button.cancel {
+    background-color: red;
+}
+
+/* View button */
+a.button.view {
+    background-color: #4285f4;
+}
+
+
+/*managecontact submit form*/
+.answer-input {
+    width: calc(100% - 120px); /* Adjust width to fit both input and button */
+    padding: 1px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-right: 10px;
+    display: flex; /* Display input field inline */
+}
+
+.submit-button {
+    padding: 1px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block; /* Display button inline */
+}
+
+.submit-button:hover {
+    background-color: #45a049;
+}
+
+/* Optional: Adjust styles for responsiveness */
+@media screen and (max-width: 600px) {
+    .answer-input {
+        width: 80%;
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+}
+
+
+/*form css*/
+/* Form styles */
+form {
+    max-width: 600px; /* Limit form width */
+    margin: 0 auto; /* Center the form horizontally */
+    padding: 20px; /* Add padding */
+    border: 1px solid #ccc; /* Add border */
+    border-radius: 5px; /* Add border radius */
+}
+
+/* Label styles */
+label {
+    display: block; /* Display labels as blocks */
+    margin-bottom: 5px; /* Add margin bottom */
+}
+
+/* Input and textarea styles */
+input[type="text"],
+input[type="number"],
+textarea {
+    width: 100%; /* Set input width to 100% */
+    padding: 10px; /* Add padding */
+    margin-bottom: 10px; /* Add margin bottom */
+    border: 1px solid #ccc; /* Add border */
+    border-radius: 5px; /* Add border radius */
+}
+
+/* Select styles */
+select {
+    width: 100%; /* Set select width to 100% */
+    padding: 10px; /* Add padding */
+    margin-bottom: 10px; /* Add margin bottom */
+    border: 1px solid #ccc; /* Add border */
+    border-radius: 5px; /* Add border radius */
+}
+
+/* Form row and column styles */
+.form-row {
+    display: flex; /* Use flexbox for form rows */
+    margin-bottom: 10px; /* Add margin bottom */
+}
+
+.form-column {
+    flex: 1; /* Set columns to take up equal space */
+    margin-right: 10px; /* Add margin right for spacing between columns */
+}
+
+.form-column:last-child {
+    margin-right: 0; /* Remove margin right for last column */
+}
+
+/* File input styles */
+input[type="file"] {
+    width: calc(100% - 40px); /* Set width of file input, considering button width */
+    padding: 10px; /* Add padding */
+    margin-bottom: 10px; /* Add margin bottom */
+    border: 1px solid #ccc; /* Add border */
+    border-radius: 5px; /* Add border radius */
+}
+
+/* Submit button styles */
+input[type="submit"] {
+    background-color: #4285f4; /* Button background color */
+    color: white; /* Button text color */
+    padding: 10px 20px; /* Add padding */
+    border: none; /* Remove button border */
+    border-radius: 5px; /* Add border radius */
+    cursor: pointer; /* Add cursor pointer */
+}
+
+/* Submit button hover effect */
+input[type="submit"]:hover {
+    background-color: #3367d6; /* Darker background color on hover */
+}
+
+
+
+
+
+.details-container {
+    display: flex;
+}
+
+.driver-details,
+.vehicle-details {
+    flex: 1;
+    margin-right: 20px; /* Adjust as needed */
+}
+
+.details-table {
+    width: 100%;
+}
+
+
+/*calendar.php*/
+/* Highlighted date style */
+.highlighted-date {
+    background-color: lightgreen; /* Yellow */
+}
+
+/* Styles for previous and next month links */
+.previous-month, .next-month {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff; /* Blue */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.previous-month {
+    margin-right: 10px;
+}
+
+.previous-month:hover, .next-month:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    color: white;
+    text-decoration: none;
+}
+
+
+
+/*notifbell.php*/
+.action-button {
+    display: inline-block;
+    padding: 10px;
+    background-color: gold;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Adjust the values as needed */
+}
+
+.action-button:hover {
+    background-color: #ffd700; /* Adjust the hover color if needed */
+}
+
+/*notifications.php button*/
+.action-button1 {
+    display: inline-block;
+    padding: 5px;
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.action-button2 {
+    display: inline-block;
+    padding: 5px;
+    background-color: green; /* Bootstrap secondary color */
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.action-button1:hover,
+.action-button2:hover {
+    opacity: 0.8;
+}
+
+/*managerefund.php button*/
+.action-button3 {
+    background-color: #007bff; /* Blue background color */
+    color: #fff; /* White text color */
+    padding: 8px 16px; /* Adjust padding as needed */
+    border-radius: 4px; /* Rounded corners */
+    text-decoration: none; /* Remove default underline */
+    display: inline-block;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.action-button3:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    color: white;
+    text-decoration: none;
+}
+
+
+/*remove button in notification*/
+.action-button5 {
+    background-color: red; /* Red */
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.action-button5:hover {
+    background-color: #d9534f; /* Darker red on hover */
+}
+
+
+
+/*search buttons*/
+
+
+
+/*settings.php*/
+/* Style for email label */
+label[for="email"] {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333; /* You can adjust the color as needed */
+}
+
+/* Style for email input field */
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px; /* You can adjust the font size as needed */
+}
+
+
+/* Style for password label */
+label[for="password"] {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333; /* You can adjust the color as needed */
+}
+
+/* Style for password input field */
+input[type="password"] {
+    width: calc(100% - 26px); /* Adjusted width to accommodate checkbox */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px; /* You can adjust the font size as needed */
+}
+
+/* Style for "Show Password" checkbox */
+#showPassword {
+    margin-right: 5px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+
+
+/* Style for submit buttons */
+button[type="submit"] {
+    padding: 5px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px; /* Add margin between buttons */
+}
+
+/* Style for the second button */
+button[type="submit"]:last-child {
+    margin-right: 0; /* Remove right margin for the last button */
+}
+
+/* Style for the second button */
+button[type="submit"][name="disable"] {
+    background-color: #ff0000; /* Red color */
+}
+
+.review-link {
+        color: white; /* Change the text color to white */
+        background-color: #4285f4; /* Set the background color to blue */
+        padding: 10px 10px; /* Add padding for better appearance */
+        border-radius: 5px; /* Add border radius for rounded corners */
+        text-decoration: none; /* Remove underline from the link */
+    }
+
+    .review-link:hover {
+        background-color: darkblue; /* Change the background color to darker blue when hovering */
+    }
+
+
+
+
+/*create link*/
+.create-link {
+        color: blue; /* Change the text color to blue */
+        text-decoration: none; /* Remove underline from the link */
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .create-link:hover {
+        color: darkblue; /* Change the text color to dark blue when hovering */
+    }
+
+    .create-link i {
+        margin-right: 5px; /* Add some space between the icon and text */
+        color: black; /* Set the color of the icon to black */
+    }
+
+
+
+
+
+/*new header and search*/
+.header {
+    float: right; /* Move the header to the left */
+    margin-right: 20px; /* Add some space between the header and the form */
+}
+.headers {
+    float: right; /* Move the header to the left */
+    margin-right: 20px; /* Add some space between the header and the form */
+    margin-top: 20px;
+}
+.headerss {
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Styles for search form */
+.search-form {
+    float: left; /* Move the form to the left */
+    border: none; /* Remove border */
+}
+
+/* Styles for search input */
+.search-form input[type="text"] {
+    padding: 8px; /* Add padding to the input */
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 4px; /* Add border radius */
+    width: 200px; /* Set width of the input */
+}
+
+/* Styles for search button */
+.search-form button {
+    padding: 8px 15px; /* Add padding to the button */
+    background-color: #007bff; /* Set background color */
+    color: #fff; /* Set text color */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Add border radius */
+    cursor: pointer; /* Change cursor on hover */
+}
+
+
+/* Styles for create link */
+.create-link {
+    color: #007bff; /* Set link color */
+    text-decoration: none; /* Remove underline */
+}
+
+/* Styles for create link icon */
+.create-link i {
+    margin-right: 5px; /* Add space between icon and text */
+}
+
+.headersearch {
+    margin-left: 10px; /* Add margin around the header and search section */
+    margin-right: 35px; /* Add margin around the header and search section */
+    margin-top: 10px;
+}
+
